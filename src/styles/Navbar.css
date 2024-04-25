@@ -1,0 +1,12 @@
+nav{
+  font-size: 18px;
+  padding: 30px 40px;
+}
+nav ul{
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+nav .logo{
+  font-weight: 700;
+}

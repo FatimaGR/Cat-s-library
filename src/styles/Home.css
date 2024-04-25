@@ -1,0 +1,17 @@
+.home{
+  gap: 10px;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.home .title{
+  font-size: 74px;
+  color: #813BC8;
+}
+.home .quote{
+  font-size: 22px;
+}
+.home img{
+  width: 450px;
+  max-width: 90%;
+}
