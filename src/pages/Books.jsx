@@ -1,4 +1,5 @@
 import { getBooks } from "../services/services.js"
+import BooksList from "../components/BooksList.jsx"
 
 function Books(){
   const { data: books, loading: booksLoading, error: booksError } = getBooks()
@@ -6,7 +7,7 @@ function Books(){
   return(
     <div>
       <p>Books</p>
-      <ul>{books?.map((book) => <li>{book.name}</li>)}</ul>
+      <BooksList books={books}/>
     </div>
   )
 }
