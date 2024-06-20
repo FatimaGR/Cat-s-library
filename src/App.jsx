@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx"
 import About from "./pages/About.jsx"
 import Books from "./pages/Books.jsx"
 import Create from "./pages/Create.jsx"
+import Update from "./pages/Update.jsx"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<About />}/>
         <Route path="/books" element={<Books />}/>
         <Route path="/create" element={<Create />}/>
+        <Route path="/update" element={<Update />}/>
       </Routes>
     </>
   )
