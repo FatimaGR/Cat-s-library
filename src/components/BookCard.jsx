@@ -27,7 +27,7 @@ function bookImageSrc(theme){
 function modalActualization(children, book, setChildren){
   switch (children) {
     case "delete":
-      return <DeleteBook setModalChildren={setChildren}/>
+      return <DeleteBook setModalChildren={setChildren} id={book?.id}/>
     case "update":
       return <UpdateBook setModalChildren={setChildren}/>
     default:

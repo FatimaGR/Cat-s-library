@@ -1,4 +1,4 @@
-import { deleteBook } from "../services/services";
+import { deleteBook } from "../services/services.js";
 
 function DeleteBook({id, setModalChildren}){
   function refreshPage() {
@@ -8,6 +8,7 @@ function DeleteBook({id, setModalChildren}){
   function handleDelete(){
     deleteBook(id)
     .then(refreshPage)
+    .catch(error => console.log(error))
   }
 
   return(
