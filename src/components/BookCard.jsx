@@ -29,7 +29,7 @@ function modalActualization(children, book, setChildren){
     case "delete":
       return <DeleteBook setModalChildren={setChildren} id={book?.id}/>
     case "update":
-      return <UpdateBook setModalChildren={setChildren}/>
+      return <UpdateBook setModalChildren={setChildren} id={book?.id}/>
     default:
       return <BookDetail key={book?.id} id={book?.id}/>
   }

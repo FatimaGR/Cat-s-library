@@ -29,7 +29,7 @@ function Create(){
     }
 
     setErrorMessage("");
-    console.log(formData)
+
     createBook(formData)
     .then(handleClick)
     .catch(error => {
@@ -54,6 +54,7 @@ function Create(){
             value={formData.name}
             onChange={handleChange}
             label="Name"
+            placeholder="write a name"
           />
           <Input
             id="author"
@@ -61,6 +62,7 @@ function Create(){
             value={formData.author}
             onChange={handleChange}
             label="Author"
+            placeholder="write a author"
           />
           <div>
             {themes.map((theme) =>
@@ -80,6 +82,7 @@ function Create(){
             value={formData.synopsis}
             onChange={handleChange}
             label="Synopsis"
+            placeholder="write a synopsis"
           />
         </div>
         <button type="submit">Create</button>

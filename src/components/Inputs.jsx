@@ -1,4 +1,4 @@
-export function Input({ id, name, type="text", value, onChange, label}) {
+export function Input({ id, name, type="text", value, onChange, label, placeholder=""}) {
   return (
     <div key={id}>
       <label htmlFor={id || name}>{label}</label>
@@ -8,12 +8,13 @@ export function Input({ id, name, type="text", value, onChange, label}) {
         id={id || name}
         value={value}
         onChange={onChange}
+        placeholder={placeholder}
       />
     </div>
   )
 }
 
-export function TextArea({ id, name, value, onChange, label}) {
+export function TextArea({ id, name, value, onChange, label, placeholder=""}) {
   return (
     <div key={id}>
       <label htmlFor={id || name}>{label}</label>
@@ -22,6 +23,7 @@ export function TextArea({ id, name, value, onChange, label}) {
         id={id || name}
         value={value}
         onChange={onChange}
+        placeholder={placeholder}
       />
     </div>
   )

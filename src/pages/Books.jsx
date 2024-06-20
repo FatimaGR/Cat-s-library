@@ -1,8 +1,10 @@
 import { getBooks } from "../services/services.js"
 import BooksList from "../components/BooksList.jsx"
 import { useEffect, useState } from "react";
+import Search from "../components/Search.jsx";
 
 function Books(){
+  const [intialBooks, setInitialBooks] = useState([])
   const [books, setBooks] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -11,6 +13,7 @@ function Books(){
     getBooks()
       .then ((books) => {
         setBooks(books)
+        setInitialBooks(books)
         setLoading(false)
       })
       .catch((error) => {
@@ -19,13 +22,26 @@ function Books(){
       })
   },[]);
 
+  function handleSearchSubmit(name){
+    if (name != ""){
+      const nameUpper = name.toUpperCase()
+      const booksFiltered = books.filter((book) => book.name.toUpperCase().includes(nameUpper))
+      setBooks(booksFiltered)
+    } else {
+      setBooks(intialBooks)
+    }
+  }
+
   return(
     <div>
       <p>Books</p>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <BooksList books={books} />
+        <div>
+          <Search onSubmit={handleSearchSubmit}/>
+          <BooksList books={books} />
+        </div>
       )}
     </div>
   )
