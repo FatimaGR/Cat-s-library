@@ -17,18 +17,18 @@ function Create(){
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleClick = () => {
-    navigate("/books");
+    navigate("/books")
   };
 
   function handleSubmit(e){
-    e.preventDefault();
+    e.preventDefault()
 
     if (!formData.name || !formData.author || !formData.synopsis || !formData.theme) {
       setErrorMessage("Please complete all the information...");
       return;
     }
 
-    setErrorMessage("");
+    setErrorMessage("")
 
     createBook(formData)
     .then(handleClick)
@@ -39,8 +39,8 @@ function Create(){
   }
 
   function handleChange(event){
-    const {name, value} = event.target;
-    setFormData({ ...formData, [name]: value});
+    const {name, value} = event.target
+    setFormData({ ...formData, [name]: value})
   }
 
   return(
