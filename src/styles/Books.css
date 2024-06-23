@@ -1,0 +1,90 @@
+.books-page{
+  gap: 60px;
+}
+.books{
+  padding: 50px;
+  width: 980px;
+  max-width: 90%;
+}
+.books .recommend-container{
+  border-radius: 10px;
+  background-color: #813BC8;
+  padding: 10px 40px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.books .subtitle{
+  font-size: 40px;
+  font-weight: 500;
+}
+.books .create-button{
+  color: #fff;
+  border-radius: 10px;
+  border: solid 2px #fff;
+  padding: 5px 20px;
+}
+.books .recommend-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 40%;
+  gap: 20px;
+}
+.books img{
+  max-width: 400px;
+}
+.books-container{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.books-options{
+  display: flex;
+  gap: 20px;
+}
+.books-list{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+.books-pages{
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  gap: 10px;
+}
+.books-pages button{
+  border: solid 2px #813BC8;
+  border-radius: 10px;
+  padding: 5px;
+  color: #813BC8;
+}
+.books .search-form{
+  display: flex;
+  justify-content: space-between;
+  border: solid 2px #813BC8;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.books .search-form input{
+  border: none;
+  background: none;
+  color: #813BC8;
+  outline: none;
+}
+.search-form input::placeholder{
+  color: #813BC8;
+}
+.books .search-form button{
+  background: none;
+  border: none;
+  color: #813BC8;
+  cursor: pointer;
+}

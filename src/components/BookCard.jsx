@@ -8,6 +8,7 @@ import BookDetail from "./BookDetail"
 import Modal from "./Modal"
 import DeleteBook from "./DeleteBook"
 import { UpdateBook } from "./UpdateBook"
+import "../styles/Books.css"
 
 function bookImageSrc(theme){
   switch (theme) {

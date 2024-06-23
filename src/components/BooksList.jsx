@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BookCard from "./BookCard"
+import "../styles/Books.css"
 
 function pagination(data, page, limit) {
   const startId = (page - 1) * limit;
@@ -15,9 +16,13 @@ function BooksList({books}){
 
   return(
     <div>
-      <ul>{paginatedBooks?.map((book) => <BookCard key={book.id} book={book}/>)}</ul>
-      <button disabled={page === 1} onClick={() => setPage(page - 1)}>Previous</button>
-      <button disabled={paginatedBooks?.length < limit} onClick={() => setPage(page + 1)}>Next</button>
+      <ul className="books-list">
+        {paginatedBooks?.map((book) => <BookCard key={book.id} book={book}/>)}
+      </ul>
+      <div className="books-pages">
+        <button disabled={page === 1} onClick={() => setPage(page - 1)}>Previous</button>
+        <button disabled={paginatedBooks?.length < limit} onClick={() => setPage(page + 1)}>Next</button>
+      </div>
     </div>
   )
 }

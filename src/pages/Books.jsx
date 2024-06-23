@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import Search from "../components/Search.jsx";
 import Sort from "../components/Sort.jsx";
 import Filter from "../components/Filter.jsx";
+import { Link } from "react-router-dom";
+import create from "../assets/create.png"
+import "../styles/Books.css"
 
 function Books(){
   const [initialBooks, setInitialBooks] = useState([])
@@ -59,21 +62,30 @@ function Books(){
   }
 
   return(
-    <div>
-      <p>Books</p>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <div>
-          <div>
-            <Sort onSortChange={handleSort}/>
-            <Search onSubmit={handleSearchSubmit}/>
-            <Filter filter={filter} onFilterChange={handleFilter}/>
+    <section className="books-page first-container">
+      <div className="books first-container">
+        <div className="recommend-container">
+          <div className="recommend-content">
+            <p className="subtitle">Recommend <br /> books here!</p>
+            <p>Do you have a book to recommend? Feel free to add it by clicking below.</p>
+            <Link to={"/create"} className="create-button">Create</Link>
           </div>
-          <BooksList books={filteredBooks} />
+          <img src={create} alt="create"/>
         </div>
-      )}
-    </div>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div className="books-container">
+            <div className="books-options">
+              <Sort onSortChange={handleSort}/>
+              <Search onSubmit={handleSearchSubmit}/>
+              <Filter filter={filter} onFilterChange={handleFilter}/>
+            </div>
+            <BooksList books={filteredBooks} />
+          </div>
+        )}
+      </div>
+    </section>
   )
 }
 

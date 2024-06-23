@@ -1,5 +1,6 @@
 import { useState } from "react"
 import search from "../assets/bx-search-alt-2.svg"
+import "../styles/Books.css"
 
 function Search({ onSubmit }){
   const [word, setWord] = useState("");
@@ -14,9 +15,9 @@ function Search({ onSubmit }){
   }
 
   return(
-    <form onSubmit={handleSubmit}>
-      <button action="submit"><img src={search} alt=""/></button>
+    <form onSubmit={handleSubmit} className="search-form">
       <input type="text" value={word} id="search" onChange={handleWordChange} placeholder="Search..."/>
+      <button action="submit"><img src={search} alt=""/></button>
     </form>
   )
 }
