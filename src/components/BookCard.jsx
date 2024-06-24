@@ -41,9 +41,8 @@ function BookCard({book}){
   const [modalChildren, setModalChildren] = useState("book detail")
 
   return(
-    <div>
-      <img style={{ width: '200px' }} src={bookImageSrc(book?.theme)} alt={book?.name} />
-      <br />
+    <div className="book-card">
+      <img src={bookImageSrc(book?.theme)} alt={book?.name} />
       <button onClick={() => setOpen(true)}>{book?.name}</button>
       <Modal open={open} close={() => setOpen(false)} setChildren={setModalChildren}>
         {modalActualization(modalChildren, book, setModalChildren)}

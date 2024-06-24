@@ -5,6 +5,7 @@
   padding: 50px;
   width: 980px;
   max-width: 90%;
+  gap: 40px;
 }
 .books .recommend-container{
   border-radius: 10px;
@@ -64,13 +65,19 @@
   border-radius: 10px;
   padding: 5px;
   color: #813BC8;
+  cursor: pointer;
+}
+.books-pages button:disabled{
+  color: #a7a7a7;
+  border-color: #a7a7a7;
 }
 .books .search-form{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: solid 2px #813BC8;
   border-radius: 10px;
-  padding: 5px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 .books .search-form input{
@@ -87,4 +94,69 @@
   border: none;
   color: #813BC8;
   cursor: pointer;
+  height: fit-content;
+}
+.book-card{
+  width: 150px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.book-card img{
+  max-width: 100%;
+  border-radius: 10px;
+}
+.book-card button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+.filter-container{
+  position: relative;
+  z-index: 0;
+}
+.filter-container button{
+  background-color: #813BC8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-family: 'Urbanist', sans-serif;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.filter-list{
+  position: absolute;
+  list-style: none;
+  background-color: #ffffffcc;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 10px;
+  border: solid 3px #813BC8;
+  font-weight: 600;
+  min-width: 190px;
+}
+.filter-card label{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+.filter-card input{
+  appearance: none;
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url("../assets/bx-checkbox.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.filter-card input:checked{
+  background-image: url("../assets/bx-checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

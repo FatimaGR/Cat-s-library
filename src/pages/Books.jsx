@@ -7,6 +7,7 @@ import Filter from "../components/Filter.jsx";
 import { Link } from "react-router-dom";
 import create from "../assets/create.png"
 import "../styles/Books.css"
+import arrow from "../assets/bx-chevron-down.svg"
 
 function Books(){
   const [initialBooks, setInitialBooks] = useState([])
@@ -79,7 +80,10 @@ function Books(){
             <div className="books-options">
               <Sort onSortChange={handleSort}/>
               <Search onSubmit={handleSearchSubmit}/>
-              <Filter filter={filter} onFilterChange={handleFilter}/>
+              <div className="filter-container">
+                <button>Filter <img src={arrow} alt="" /></button>
+                <Filter filter={filter} onFilterChange={handleFilter}/>
+              </div>
             </div>
             <BooksList books={filteredBooks} />
           </div>

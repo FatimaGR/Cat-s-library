@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import "../styles/Books.css"
 
 function Filter({filter, onFilterChange}){
   const themes = ["Cat protagonist","Cat care", "Feline fiction", "Cat lover author", "Other"]
@@ -22,19 +23,21 @@ function Filter({filter, onFilterChange}){
   }
 
   return(
-    <div>
+    <ul className="filter-list">
       {themes.map((theme) => (
-        <label htmlFor={theme}>
-          <input 
-            type="checkbox"
-            name={theme}
-            value={theme}
-            onChange={handleCheckbox}
-          />
-          {theme}
-        </label>
+        <div className="filter-card">
+          <label htmlFor={theme}>
+            <input 
+              type="checkbox"
+              name={theme}
+              value={theme}
+              onChange={handleCheckbox}
+            />
+            {theme}
+          </label>
+        </div>
       ))}
-    </div>
+    </ul>
   )
 }
 
