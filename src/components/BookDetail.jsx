@@ -41,7 +41,9 @@ function BookDetail({id}){
   return(
     <div>
       {loading ? (
-        <p>Loading...</p>
+        <div className="book-detail">
+          <p>Loading...</p>
+        </div>
       ) : (
         <div className="book-detail">
           <img src={bookImageSrc(book?.theme)} alt={book?.name} />

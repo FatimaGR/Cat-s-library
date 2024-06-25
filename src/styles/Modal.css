@@ -45,16 +45,6 @@
   justify-content: space-evenly;
   gap: 15px;
 }
-.delete,
-.update{
-  background-color: #fff;
-  border-radius: 10px;
-  width: 630px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
 .modal-button{
   background-color: #fff;
   border: solid 2px #813BC8;
@@ -69,4 +59,42 @@
 .modal-buttons{
   display: flex;
   gap: 5px;
+}
+.delete,
+.update{
+  background-color: #fff;
+  border-radius: 10px;
+  width: 630px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.delete img{
+  max-height: 100px;
+}
+.update img{
+  max-height: 130px;
+}
+.delete-buttons,
+.update-buttons{
+  display: flex;
+  gap: 20px;
+}
+.delete-button,
+.update-button{
+  background-color: #813BC8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+}
+.update-title{
+  font-size: 24px;
 }

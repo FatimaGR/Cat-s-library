@@ -30,6 +30,9 @@ a:hover{
 li{
   list-style: none;
 }
+button{
+  font-family: "Quicksand", sans-serif;
+}
 /* pages general styles */
 .first-container{
   display: flex;
