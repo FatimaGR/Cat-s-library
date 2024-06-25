@@ -16,6 +16,9 @@ function Books(){
   const [filter, setFilter] = useState([])
   const [sort, setSort] = useState("")
 
+  const [filterToggle, setFilterToggle] = useState(false)
+  const [sortToggle, setSortToggle] = useState(false)
+
   useEffect(() => {
     setLoading(true)
     getBooks()
@@ -57,9 +60,15 @@ function Books(){
   function handleFilter(newFilter){
     setFilter(newFilter)
   }
-
   function handleSort(newSort){
     setSort(newSort)
+  }
+
+  function handleFilterToggle(){
+    setFilterToggle(!filterToggle)
+  }
+  function handleSortToggle(){
+    setSortToggle(!sortToggle)
   }
 
   return(
@@ -78,11 +87,14 @@ function Books(){
         ) : (
           <div className="books-container">
             <div className="books-options">
-              <Sort onSortChange={handleSort}/>
+              <div className="filter-container">
+                <button onClick={handleSortToggle}>Sort <img src={arrow} alt="" /></button>
+                <Sort onSortChange={handleSort} classname={sortToggle ? "sort-list" : "none"}/>
+              </div>
               <Search onSubmit={handleSearchSubmit}/>
               <div className="filter-container">
-                <button>Filter <img src={arrow} alt="" /></button>
-                <Filter filter={filter} onFilterChange={handleFilter}/>
+                <button onClick={handleFilterToggle}>Filter <img src={arrow} alt="" /></button>
+                <Filter filter={filter} onFilterChange={handleFilter} classname={filterToggle ? "filter-list" : "none"}/>
               </div>
             </div>
             <BooksList books={filteredBooks} />

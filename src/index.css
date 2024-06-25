@@ -46,3 +46,7 @@ li{
   flex-wrap: wrap;
   justify-content: space-between;
 }
+/* utils */
+.none{
+  display: none;
+}

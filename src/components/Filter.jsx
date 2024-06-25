@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import "../styles/Books.css"
 
-function Filter({filter, onFilterChange}){
+function Filter({filter, onFilterChange, classname}){
   const themes = ["Cat protagonist","Cat care", "Feline fiction", "Cat lover author", "Other"]
   const [localFilter, setLocalFilter] = useState(filter)
 
@@ -23,7 +23,7 @@ function Filter({filter, onFilterChange}){
   }
 
   return(
-    <ul className="filter-list">
+    <div className={classname}>
       {themes.map((theme) => (
         <div className="filter-card">
           <label htmlFor={theme}>
@@ -37,7 +37,7 @@ function Filter({filter, onFilterChange}){
           </label>
         </div>
       ))}
-    </ul>
+    </div>
   )
 }
 

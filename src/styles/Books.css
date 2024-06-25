@@ -41,6 +41,7 @@
 .books-container{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
 }
 .books-options{
@@ -52,7 +53,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  gap: 40px;
+  gap: 60px;
 }
 .books-pages{
   display: flex;
@@ -88,6 +89,8 @@
 }
 .search-form input::placeholder{
   color: #813BC8;
+  font-size: 16px;
+  font-weight: 500;
 }
 .books .search-form button{
   background: none;
@@ -127,10 +130,14 @@
   font-family: 'Urbanist', sans-serif;
   box-sizing: border-box;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
 }
-.filter-list{
+.filter-list,
+.sort-list{
   position: absolute;
-  list-style: none;
   background-color: #ffffffcc;
   padding: 15px;
   display: flex;
@@ -140,8 +147,10 @@
   border: solid 3px #813BC8;
   font-weight: 600;
   min-width: 190px;
+  margin-top: 10px;
 }
-.filter-card label{
+.filter-card label,
+.sort-list label{
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -157,6 +166,19 @@
 }
 .filter-card input:checked{
   background-image: url("../assets/bx-checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sort-list input{
+  appearance: none;
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url("../assets/bx-radio-circle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sort-list input:checked{
+  background-image: url("../assets/bx-radio-circle-marked.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
