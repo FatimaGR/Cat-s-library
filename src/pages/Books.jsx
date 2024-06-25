@@ -80,7 +80,7 @@ function Books(){
             <p>Do you have a book to recommend? Feel free to add it by clicking below.</p>
             <Link to={"/create"} className="create-button">Create</Link>
           </div>
-          <img src={create} alt="create"/>
+          <img src={create} alt="create" className="create-image"/>
         </div>
         {loading ? (
           <p>Loading...</p>

@@ -35,7 +35,7 @@
   max-width: 40%;
   gap: 20px;
 }
-.books img{
+.books .create-image{
   max-width: 400px;
 }
 .books-container{
@@ -106,11 +106,11 @@
   flex-direction: column;
   gap: 20px;
 }
-.book-card img{
+.book-card > img{
   max-width: 100%;
   border-radius: 10px;
 }
-.book-card button{
+.book-card > button{
   background: none;
   border: none;
   cursor: pointer;

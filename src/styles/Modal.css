@@ -1,0 +1,72 @@
+.modal-background{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #813bc88e;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.book-detail{
+  background-color: #fff;
+  border: solid 2px #813BC8;
+  border-radius: 10px;
+  width: 630px;
+  padding: 20px;
+  display: flex;
+  gap: 25px;
+  box-sizing: border-box;
+}
+.book-detail img{
+  width: 220px;
+  max-width: 40%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.book-theme{
+  background-color: #813BC8;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.book-description{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+.delete,
+.update{
+  background-color: #fff;
+  border-radius: 10px;
+  width: 630px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.modal-button{
+  background-color: #fff;
+  border: solid 2px #813BC8;
+  border-radius: 100%;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+}
+.modal-button img{
+  height: 30px;
+}
+.modal-buttons{
+  display: flex;
+  gap: 5px;
+}

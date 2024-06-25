@@ -1,4 +1,5 @@
 import { deleteBook } from "../services/services.js";
+import "../styles/Modal.css"
 
 function DeleteBook({id, setModalChildren}){
   function refreshPage() {
@@ -12,7 +13,7 @@ function DeleteBook({id, setModalChildren}){
   }
 
   return(
-    <div>
+    <div className="delete">
       <p>Are you sure?</p>
       <button onClick={handleDelete}>Yes, delete</button>
       <button onClick={() => setModalChildren("book detail")}>No, cancel</button>
