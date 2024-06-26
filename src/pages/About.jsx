@@ -18,7 +18,7 @@ function About(){
         <div className="information">
           <img src={paws} alt="paws" className="paws"/>
           <div className="cats-presentation">
-            <p>If you know of any book that is not on our list, you are also invited to add it, feel free to share. <br />
+            <p>If you know of any book that is not on our list, you are also invited to add it, feel free to share. <br /><br />
 Our little cats will accompany you during your book search. They are Nina, Kai, Lea, Max, and Yana. Start your adventure by clicking the paw!"</p>
             <ul>
               <li><img src={nina} alt="nina"/></li>

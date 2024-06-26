@@ -5,13 +5,25 @@
   text-align: center;
 }
 .home .title{
-  font-size: 74px;
+  font-size: 4.625em;
   color: #813BC8;
 }
 .home .quote{
-  font-size: 22px;
+  font-size: 1.375em;
 }
 .home img{
   width: 450px;
   max-width: 90%;
+}
+@media(max-width: 460px){
+  .home .title{
+    font-size: 3.625em;
+    line-height: 1;
+  }
+  .home .quote{
+    font-size: 1.143em;
+  }
+  .home img{
+    margin-top: 10px;
+  }
 }
