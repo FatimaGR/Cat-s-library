@@ -1,4 +1,4 @@
-import "../styles/Create.css"
+import "../styles/Form.css"
 
 export function Input({ id, name, type="text", value, onChange, label, placeholder="", classInput, classDiv}) {
   return (

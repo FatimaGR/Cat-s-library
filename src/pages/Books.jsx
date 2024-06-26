@@ -48,9 +48,13 @@ function Books(){
   }, [filter, sort, initialBooks])
 
   function handleSearchSubmit(name){
-    if (name != ""){
+    if (name != "" & filter.length > 0){
       const nameUpper = name.toUpperCase()
       const booksFiltered = filteredBooks.filter((book) => book.name.toUpperCase().includes(nameUpper))
+      setFilteredBooks(booksFiltered)
+    } else if (name != "" & filter.length == 0){
+      const nameUpper = name.toUpperCase()
+      const booksFiltered = initialBooks.filter((book) => book.name.toUpperCase().includes(nameUpper))
       setFilteredBooks(booksFiltered)
     } else {
       setFilteredBooks(initialBooks)

@@ -15,7 +15,7 @@ function BooksList({books}){
   const paginatedBooks = pagination(books, page, limit);
 
   return(
-    <div>
+    <div className="width-100">
       <ul className="books-list">
         {paginatedBooks?.map((book) => <BookCard key={book.id} book={book}/>)}
       </ul>

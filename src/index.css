@@ -16,6 +16,7 @@ h1{
 }
 label{
   font-size: 18px;
+  text-align: left;
 }
 input::placeholder{
   font-size: 14px;
@@ -31,7 +32,6 @@ li{
   list-style: none;
 }
 input::placeholder,
-.text-area::placeholder,
 button{
   font-family: "Quicksand", sans-serif;
 }
@@ -57,4 +57,7 @@ button{
 }
 .flex{
   display: flex;
+}
+.width-100{
+  width: 100%;
 }

@@ -95,6 +95,9 @@
   cursor: pointer;
   font-size: 16px;
 }
+.update-button:hover{
+  color: #fff;
+}
 .update-title{
   font-size: 24px;
 }

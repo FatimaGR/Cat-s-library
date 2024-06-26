@@ -1,0 +1,106 @@
+.form-container{
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+.update form{
+  width: 70%;
+  align-items: center;
+}
+.form-container button{
+  background-color: #813BC8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+}
+.input-container,
+.theme-input-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.theme-input-container{
+  position: relative;
+}
+.select-input{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.select-input > label{
+  font-size: 14px;
+  font-weight: 600;
+}
+.theme-selection{
+  position: absolute;
+  background-color: #ffffffcc;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 5px;
+  border: solid 2px #813BC8;
+  top: 70px;
+}
+.select-button,
+.selected-button,
+.text-input,
+.text-area{
+  border: solid 2px #813BC8;
+  border-radius: 5px;
+  background: none;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: none;
+}
+.text-area{
+  min-height: 200px;
+}
+.text-area::placeholder{
+  font-family: "Quicksand", sans-serif;
+}
+.text-input::placeholder,
+.text-area::placeholder,
+.select-button{
+  color: #00000080;
+}
+.selected-button{
+  color: #000000;
+}
+.select-button,
+.selected-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.select-button img,
+.selected-button img{
+  fill: #813BC8;
+}
+.two-options{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.theme-selection input{
+  appearance: none;
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url("../assets/bx-radio-circle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.theme-selection input:checked{
+  background-image: url("../assets/bx-radio-circle-marked.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
