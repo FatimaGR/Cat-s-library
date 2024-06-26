@@ -80,7 +80,7 @@ function Books(){
       <div className="books first-container">
         <div className="recommend-container">
           <div className="recommend-content">
-            <p className="subtitle">Recommend <br /> books here!</p>
+            <p className="subtitle">Recommend books here!</p>
             <p>Do you have a book to recommend? Feel free to add it by clicking below.</p>
             <Link to={"/create"} className="create-button">Create</Link>
           </div>
