@@ -30,6 +30,8 @@ a:hover{
 li{
   list-style: none;
 }
+input::placeholder,
+.text-area::placeholder,
 button{
   font-family: "Quicksand", sans-serif;
 }
@@ -52,4 +54,7 @@ button{
 /* utils */
 .none{
   display: none;
+}
+.flex{
+  display: flex;
 }

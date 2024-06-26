@@ -1,4 +1,4 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getBookById, updateBook } from "../services/services.js";
 import { useEffect, useState } from "react";
 import { Input, TextArea } from "../components/Inputs.jsx";
@@ -59,11 +59,13 @@ function Update(){
   }
 
   return(
-    <div>
+    <div className="first-container">
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className="update">
+          <h1>Edit the book</h1>
+          <p>Thank you for updating or correcting the information of this book!</p>
           <form onSubmit={handleSubmit}>
             <div>
               <Input
@@ -107,8 +109,8 @@ function Update(){
               />
             </div>
             <button type="submit">Update</button>
-          </form>
           {errorMessage && <p>{errorMessage}</p>}
+          </form>
         </div>
       )}
     </div>

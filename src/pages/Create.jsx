@@ -2,6 +2,9 @@ import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import { Input, TextArea } from "../components/Inputs"
 import { createBook } from "../services/services.js";
+import ThemesList from "../components/ThemesList.jsx";
+import "../styles/Create.css"
+import arrow from "../assets/bx-chevron-down-purple.svg"
 
 function Create(){
   const navigate = useNavigate()
@@ -15,6 +18,7 @@ function Create(){
   })
 
   const [errorMessage, setErrorMessage] = useState("");
+  const [themeToggle, setThemeToggle] = useState(false)
 
   const handleClick = () => {
     navigate("/books")
@@ -43,51 +47,68 @@ function Create(){
     setFormData({ ...formData, [name]: value})
   }
 
+  function handleThemeToggle(){
+    setThemeToggle(!themeToggle)
+  }
+
   return(
-    <div>
-      <p>Create</p>
+    <div className="create second-container">
+      <ThemesList/>
       <form onSubmit={handleSubmit}>
-        <div>
-          <Input
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            label="Name"
-            placeholder="write a name"
-          />
+        <h1>Do you have a <br /> recommendation?</h1>
+        <p>Fill in the details of the book you want to recommend. <br />
+        About the themes, you can see what each one refers to in the list.</p>
+        <Input
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          label="Name"
+          placeholder="Write the name of the book or series"
+          classInput="text-input"
+          classDiv="input-container"
+        />
+        <div className="two-options">
           <Input
             id="author"
             name="author"
             value={formData.author}
             onChange={handleChange}
             label="Author"
-            placeholder="write a author"
+            placeholder="Write the name of the author"
+            classInput="text-input"
+            classDiv="input-container"
           />
-          <div>
-            {themes.map((theme) =>
-              <Input
-                id={theme}
-                type="radio"
-                name="theme"
-                value={theme}
-                onChange={handleChange}
-                label={theme}
-              />
-            )}
+          <div className="theme-input-container">
+            <label>Theme</label>
+            <div className="select-button" onClick={handleThemeToggle}>Select a theme <img src={arrow}/></div>
+            <div className={themeToggle ? "theme-selection" : "none"}>
+              {themes.map((theme) =>
+                <Input
+                  id={theme}
+                  type="radio"
+                  name="theme"
+                  value={theme}
+                  onChange={handleChange}
+                  label={theme}
+                  classDiv="select-input"
+                />
+              )}
+            </div>
           </div>
-          <TextArea
-            id="synopsis"
-            name="synopsis"
-            value={formData.synopsis}
-            onChange={handleChange}
-            label="Synopsis"
-            placeholder="write a synopsis"
-          />
         </div>
+        <TextArea
+          id="synopsis"
+          name="synopsis"
+          value={formData.synopsis}
+          onChange={handleChange}
+          label="Synopsis"
+          placeholder="Write what the book is about."
+          classDiv="input-container"
+        />
         <button type="submit">Create</button>
+        {errorMessage && <p>{errorMessage}</p>}
       </form>
-      {errorMessage && <p>{errorMessage}</p>}
     </div>
   )
 }

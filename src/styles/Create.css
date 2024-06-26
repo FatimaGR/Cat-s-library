@@ -1,0 +1,128 @@
+.themes-container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+.theme-card{
+  background-color: #813BC8;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 10px;
+  width: 356px;
+}
+.theme-card img{
+  min-width: 170px;
+  height: 134px;
+  object-fit: cover;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.theme-description{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 15px;
+}
+.create{
+  padding: 50px;
+  gap: 8%;
+}
+.create form{
+  width: 400px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.create button{
+  background-color: #813BC8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 16px;
+}
+.input-container,
+.theme-input-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.theme-input-container{
+  position: relative;
+}
+.select-input{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.select-input > label{
+  font-size: 14px;
+  font-weight: 600;
+}
+.theme-selection{
+  position: absolute;
+  background-color: #ffffffcc;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 5px;
+  border: solid 2px #813BC8;
+  top: 70px;
+}
+.select-button,
+.text-input,
+.text-area{
+  border: solid 2px #813BC8;
+  border-radius: 5px;
+  background: none;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: none;
+}
+.text-area{
+  min-height: 200px;
+}
+.text-input::placeholder,
+.text-area::placeholder,
+.select-button{
+  color: #00000080;
+}
+.select-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.select-button img{
+  fill: #813BC8;
+}
+.two-options{
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.theme-selection input{
+  appearance: none;
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url("../assets/bx-radio-circle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.theme-selection input:checked{
+  background-image: url("../assets/bx-radio-circle-marked.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

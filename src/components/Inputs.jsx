@@ -1,6 +1,8 @@
-export function Input({ id, name, type="text", value, onChange, label, placeholder=""}) {
+import "../styles/Create.css"
+
+export function Input({ id, name, type="text", value, onChange, label, placeholder="", classInput, classDiv}) {
   return (
-    <div key={id}>
+    <div key={id} className={classDiv}>
       <label htmlFor={id || name}>{label}</label>
       <input
         type={type}
@@ -9,14 +11,15 @@ export function Input({ id, name, type="text", value, onChange, label, placehold
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        className={classInput}
       />
     </div>
   )
 }
 
-export function TextArea({ id, name, value, onChange, label, placeholder=""}) {
+export function TextArea({ id, name, value, onChange, label, placeholder="", classDiv}) {
   return (
-    <div key={id}>
+    <div key={id} className={classDiv}>
       <label htmlFor={id || name}>{label}</label>
       <textarea
         name={name}
@@ -24,6 +27,7 @@ export function TextArea({ id, name, value, onChange, label, placeholder=""}) {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        className="text-area"
       />
     </div>
   )
