@@ -12,7 +12,7 @@
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [How to use](#how-to-use)
-  - [Books](#films)
+  - [Books](#books)
   - [Book](#book)
   - [Create book](#create-book)
   - [Edit book](#edit-book)
@@ -43,7 +43,7 @@ To view it open http://localhost:5173
 ![](./readme-images/home.png)
 
 ### Links
-- Live Site URL: [Cat's library](https://-.vercel.app)
+- Live Site URL: [Cat's library](https://cat-s-library.vercel.app)
 - Code in Github: [https://github.com/FatimaGR/Cat-s-library](https://github.com/FatimaGR/Cat-s-library)
 
 ## How to use
