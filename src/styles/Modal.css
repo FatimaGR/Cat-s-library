@@ -94,11 +94,52 @@
   padding: 5px 10px;
   box-sizing: border-box;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1em;
 }
 .update-button:hover{
   color: #fff;
 }
 .update-title{
-  font-size: 24px;
+  font-size: 1.5em;
+}
+@media(max-width: 680px){
+  .modal-content{
+    max-width: 90%;
+  }
+  .delete,
+  .update,
+  .book-detail{
+    width: 100%;
+  }
+}
+@media(max-width: 540px){
+  .book-detail{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .book-description{
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .book-description p{
+    font-size: 0.875em;
+  }
+  .update-title{
+    font-size: 1.25em;
+  }
+  .delete h1,
+  .book-description h1{
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  .book-theme,
+  .delete-button,
+  .update-button{
+    font-size: 0.75em;
+  }
+  .book-detail img{
+    max-width: 30%;
+  }
 }
