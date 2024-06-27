@@ -14,7 +14,7 @@ function Sort({onSortChange, classname}){
           value=""
           onChange={handleSortChange}
         />
-        none
+        None
       </label>
       <label htmlFor="name">
         <input
