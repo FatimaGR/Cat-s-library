@@ -125,7 +125,7 @@ function Update(){
               classDiv="input-container"
             />
             <button type="submit">Update</button>
-          {errorMessage && <p>{errorMessage}</p>}
+          {errorMessage && <p className="error">{errorMessage}</p>}
           </form>
         </div>
       )}

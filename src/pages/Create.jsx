@@ -110,7 +110,7 @@ function Create(){
           classDiv="input-container"
         />
         <button type="submit">Create</button>
-        {errorMessage && <p>{errorMessage}</p>}
+        {errorMessage && <p className="error">{errorMessage}</p>}
       </form>
     </div>
   )

@@ -24,7 +24,7 @@ function Sort({onSortChange, classname}){
           value="name"
           onChange={handleSortChange}
         />
-        name
+        Alphabetically by name
       </label>
       <label htmlFor="author">
         <input
@@ -34,7 +34,7 @@ function Sort({onSortChange, classname}){
           value="author"
           onChange={handleSortChange}
         />
-        author
+        Alphabetically by author
       </label>
     </div>
   )

@@ -15,7 +15,7 @@ h1{
   font-weight: 400;
 }
 label{
-  font-size: 18px;
+  font-size: 1.125em;
   text-align: left;
 }
 input::placeholder{
