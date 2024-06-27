@@ -8,6 +8,7 @@ function DeleteBook({id, setModalChildren}){
   }
 
   function handleDelete(){
+    console.log(id)
     deleteBook(id)
     .then(refreshPage)
     .catch(error => console.log(error))
