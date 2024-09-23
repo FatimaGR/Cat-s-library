@@ -185,11 +185,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .filter-card input:checked{
   background-image: url("../assets/bx-checkbox-checked.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 .sort-list input{
   appearance: none;
@@ -199,11 +201,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .sort-list input:checked{
   background-image: url("../assets/bx-radio-circle-marked.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 @media(max-width: 960px){

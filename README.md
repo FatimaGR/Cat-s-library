@@ -21,8 +21,10 @@
 
 ## Getting Started
 ### Built with
-![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)
-![React](https://img.shields.io/badge/-React-%23282C34?style=flat-square&logo=react)
+![Static Badge](https://img.shields.io/badge/JavaScript-purple?style=flat-square&logo=javascript&logoColor=%23FFFFFF&color=%23813BC8)
+![Static Badge](https://img.shields.io/badge/React-purple?style=flat-square&logo=react&logoColor=%23FFFFFF&color=%23813BC8)
+![Static Badge](https://img.shields.io/badge/CSS-purple?style=flat-square&logo=css3&logoColor=%23FFFFFF&color=%23813BC8)
+
 - JavaScript
 - React
 - CSS
